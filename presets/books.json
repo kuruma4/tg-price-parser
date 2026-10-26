@@ -1,0 +1,29 @@
+{
+  "name": "books.toscrape.com (демо-каталог)",
+  "url": "https://books.toscrape.com/catalogue/page-1.html",
+  "item": "article.product_pod",
+  "next_page": "li.next a",
+  "max_pages": 5,
+  "fields": {
+    "name": {
+      "selector": "h3 a",
+      "attr": "title"
+    },
+    "price": {
+      "selector": "p.price_color",
+      "number": true
+    },
+    "in_stock": {
+      "selector": "p.instock.availability"
+    },
+    "rating": {
+      "selector": "p.star-rating",
+      "attr": "class",
+      "regex": "star-rating (\\w+)"
+    },
+    "link": {
+      "selector": "h3 a",
+      "attr": "href"
+    }
+  }
+}
